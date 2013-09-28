@@ -38,7 +38,7 @@ Game::Game()
 /// file to their relevent events.
 void Game::initialiseCallbacks()
 {
-  printf("Initialising callbacks");
+  printf("Initialising callbacks\n");
   // The display function should be called whenever possible
   glutDisplayFunc(displayCurrentGame);
   glutIdleFunc(displayCurrentGame);
@@ -64,7 +64,7 @@ void Game::display()
 
   // Clear the display
   glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-  glClearColor(100,0,0,0.5);
+  glClearColor(0,0,0,1);
 
   // Load a fresh matrix
   glMatrixMode(GL_MODELVIEW);
@@ -100,6 +100,7 @@ void Game::keyOperations()
     camera.MoveForward(0.1);
   if (keyDown['s'])
     camera.MoveForward(-0.1);
+  // Camera rotation
   if (keyDown['a'])
     camera.RotateY(0.05);
   if (keyDown['d'])

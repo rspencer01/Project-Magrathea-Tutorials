@@ -7,7 +7,6 @@ Camera::Camera()
   Position = Vector3(-1,0,0);
   ViewDir = Vector3(1,0,0);
   UpVector = Vector3(0,1,0);
-  RotatedX = RotatedY = RotatedZ = 0;
 }
 
 void Camera::Render()
